@@ -1,0 +1,114 @@
+[
+
+  {
+    "description": "模拟一个post请求",
+    "request": {
+      "uri": "/post",
+      "method": "post"
+    },
+    "response": {
+      "text": "post请求"
+    }
+  },
+  {
+    "description": "带参数的post",
+    "request": {
+      "uri": "/login",
+      "method": "post",
+      "forms": {
+        "id": "1",
+        "user": "hyc",
+        "pwd": "123456"
+      }
+    },
+    "response": {
+      "text": "登陆成功"
+    }
+  },
+  {
+    "description": "带cookie的get请求",
+    "request": {
+      "uri": "/get/list",
+      "method": "get",
+      "cookies": {
+        "cookie": "true"
+      }
+    },
+    "response": {
+      "text": "携带cookie登陆成功"
+    }
+  },
+  {
+    "description": "带cookie的post请求",
+    "request": {
+      "uri": "/post/login",
+      "method": "post",
+      "cookies": {
+        "cookie": "true"
+      },
+      "json": {
+        "user": "hyc",
+        "pwd": "123"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "data": "韩耀辰",
+        "status": "1001",
+        "msg": "登陆成功"
+      }
+    }
+  },
+  {
+    "description": "重定向",
+    "request": {
+      "uri": "/do"
+    },
+    "redirectTo": "http://www.baidu.com"
+  },
+  {
+    "description": "获取cookie的get请求",
+    "request": {
+      "uri": "/cookie",
+      "method": "get"
+    },
+    "response": {
+      "cookies": {
+        "cookie": "true"
+      },
+      "text": "cookie！OK"
+    }
+  },
+  {
+    "description": "带参数的post请求",
+    "request": {
+      "uri": "/user/login",
+      "method": "post",
+      "json": {
+        "userid": "1",
+        "username": "hyc",
+        "pwd": "123456"
+      }
+    },
+    "response": {
+      "cookies": {
+        "cookie": "123456789"
+      },
+      "json": {
+        "status": "200",
+        "data": {
+          "userid": "1",
+          "name1": "hyc",
+          "studen1t": "学生",
+          "name22": "hyc",
+          "stu2dent": "学生",
+          "name": "hyc",
+          "student": "学生"
+        },
+        "msg": "请求成功"
+      }
+    }
+  }
+
+]

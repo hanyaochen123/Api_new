@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="项目" parallel="false">
+    <test name="模块">
+        <classes>
+         <class name="com.chen.Cases.Test"/>
+            <class name="com.chen.Cases.ToList"/>
+        </classes>
+
+    </test>
+
+</suite>
